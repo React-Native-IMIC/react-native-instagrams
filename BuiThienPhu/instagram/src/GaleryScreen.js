@@ -92,7 +92,7 @@ export default class GaleryScreen extends React.Component {
 
 const styles = StyleSheet.create({
   bottomBar: {
-    height: 48 * calWidth,
+    height: 49 * calWidth,
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderTopWidth: 1 * calWidth,

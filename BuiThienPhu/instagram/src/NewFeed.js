@@ -143,12 +143,7 @@ export default class NewFeed extends Component {
                 </Text>
                 <Text style={styles.labelTag}> #amazing #travel</Text>
               </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  marginVertical: 6 * calWidth,
-                  justifyContent: 'space-between',
-                }}>
+              <View style={styles.content}>
                 <Text style={styles.labelTag}>
                   Users can make profiles, create works and other content, post
                   comment
@@ -193,6 +188,11 @@ export default class NewFeed extends Component {
 }
 
 const styles = StyleSheet.create({
+  content: {
+    flexDirection: 'row',
+    marginVertical: 6 * calWidth,
+    justifyContent: 'space-between',
+  },
   bottomBar: {
     height: 48 * calWidth,
     flexDirection: 'row',
