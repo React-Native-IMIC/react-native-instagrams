@@ -1,114 +1,192 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+ 
+import React, { Component } from 'react';
+import { View, Text, Image, Dimensions, ScrollView,TouchableOpacity, Slider } from 'react-native';
+import { avatar,iconCamera,iconDirectMessage,iconWatch,yourStory
+  ,story1,story2,story3,story4,iconMore,imageUpload,iconSave,addButton,iconUser,iconSlide
+  ,iconNumberOfPictures,iconHeart,iconComment} from './assets/images';
+const { width } = Dimensions.get('window');
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            paddingLeft: (12 / 375) * width,
+            paddingRight: (10 / 375) * width,
+            paddingVertical: (9 / 375) * width,
+            borderBottomWidth: (1 / 375) * width,
+            borderBottomColor: '#DADBDA',
+            backgroundColor:'#F9FAF9'
+          }}>
+          <Image
+            source={iconCamera}
+            style={{ width: (25 / 375) * width, height: (23 / 375) * width }}
+          />
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
+          <View style={{ flexDirection: 'row', alignItems:'center' }}>
+            <Image
+              source={iconWatch}
+              style={{
+                width: (22 / 375) * width,
+                height: (25 / 375) * width,
+                marginRight: (18 / 375) * width,
+              }}
+            />
+            <Image
+              source={iconDirectMessage}
+              style={{ width: (24 / 375) * width, height: (21 / 375) * width, paddingTop: (4 / 375) * width}}
+            />
           </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+        </View>
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+        <View style={{ height: (104 / 375) * width,borderBottomWidth: (1 / 375) * width,borderBottomColor: '#DADBDA', }}>
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{
+              flexDirection: 'row',
+              paddingVertical: (12 / 375) * width,
+              borderBottomWidth: (1 / 375) * width,
+              borderBottomColor: '#DADBDA',
+            }}>
+              <View style={{ paddingLeft: (15 / 375) * width }}>
+              <Image
+                source={yourStory}
+                style={{ width: (62 / 375) * width, height: (62 / 375) * width }}
+              />
+              <Text style={{ fontSize: (10 / 375) * width, fontFamily:'Helvetica',color:'#999999' }}>Your Story</Text>
+            </View>
+            <View style={{ paddingLeft: (15 / 375) * width }}>
+              <Image
+                source={story1}
+                style={{ width: (62 / 375) * width, height: (62 / 375) * width }}
+              />
+              <Text style={{ fontSize: (10 / 375) * width, fontFamily:'Helvetica',color:'#262626' }}>helge_nilsen</Text>
+            </View>
+            <View style={{ paddingLeft: (15 / 375) * width }}>
+              <Image
+                source={story2}
+                style={{ width: (62 / 375) * width, height: (62 / 375) * width }}
+              />
+              <Text style={{ fontSize: (10 / 375) * width, fontFamily:'Helvetica',color:'#262626' }}>helge_nilsen</Text>
+            </View>
+            <View style={{ paddingLeft: (15 / 375) * width }}>
+              <Image
+                source={story3}
+                style={{ width: (62 / 375) * width, height: (62 / 375) * width }}
+              />
+              <Text style={{ fontSize: (10 / 375) * width, fontFamily:'Helvetica',color:'#262626' }}>helge_nilsen</Text>
+            </View>
+            <View style={{ paddingLeft: (15 / 375) * width }}>
+              <Image
+                source={story4}
+                style={{ width: (62 / 375) * width, height: (62 / 375) * width }}
+              />
+              <Text style={{ fontSize: (10 / 375) * width, fontFamily:'Helvetica',color:'#262626' }}>helge_nilsen</Text>
+            </View>
+
+          </ScrollView>
+        </View>
+
+        <View style={{ flex: 1 }}>
+          <View style={{ flexDirection: 'row',justifyContent:'space-between',padding:(12 / 375) * width }}>
+            <View style={{ flexDirection: 'row'}}>
+              <Image
+              source={avatar}
+              style={{ width: (32 / 375) * width, height: (32 / 375) * width }}
+              />
+              <View style ={{paddingLeft:(12 / 375) * width,paddingVertical:(1 / 375) * width}}>
+                <Text
+                  style={{fontFamily:'SF-Pro-Display-Bold', fontSize:14, color:'#262626'}}
+                >tammyolson</Text>
+                <Text
+                  style={{fontFamily:'Helvetica', fontSize:11, color:'#262626'}}
+                >Holand, Rotterdam</Text>
+              </View>
+            </View>
+            <TouchableOpacity
+              style={{ width: (13 / 375) * width, height: (3 / 375) * width,marginTop:(15 / 375) * width}}
+              onPress = {()=>{}}
+            >
+              <Image
+              source={iconMore}
+              />
+             </TouchableOpacity>
+          </View>
+          <View>
+              <Image
+              source={imageUpload}
+              style = {{width: width , height:(278/ 375) * width }}
+              />
+              <View style={{position:"absolute", right:12, top:12, width: (43/375) * width , height:(24/ 375) * width}}>
+                <Image
+                  source = {iconSlide}
+                />
+              </View>
+              <View style={{position:"absolute", left:12, bottom:12, width: (43/375) * width , height:(24/ 375) * width}}>
+                <Image
+                  source = {iconUser}
+                />
+              </View>
+            </View>
+          <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center', paddingVertical:10,paddingHorizontal:12}}>
+            <View style={{flexDirection:'row',alignItems:'center'}}>
+              <View style={{flexDirection:'row',alignItems:'center'}}>
+                  <TouchableOpacity
+                  onPress = {()=>{}}
+                  style={{ width: (24 / 375) * width, height: (22 / 375) * width,marginRight:18 }}
+                >
+                  <Image
+                    source={iconHeart} 
+                    
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress = {()=>{}}
+                  style={{ width: (24 / 375) * width, height: (24 / 375) * width,marginRight:18 }}
+                >
+                  <Image
+                    source={iconComment} 
+                  
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress = {()=>{}}
+                  style={{ width: (24 / 375) * width, height: (21 / 375) * width, marginRight:32 }}
+                >
+                  <Image
+                    source={iconDirectMessage}
+                    
+                  />
+                </TouchableOpacity>
+
+              </View>
+              <Image
+                source={iconNumberOfPictures} 
+                style={{ width: (50 / 375) * width, height: (6 / 375) * width}}
+              />
+              
+            </View>
+            <TouchableOpacity
+              onPress = {()=>{}}
+              style={{ width: (21 / 375) * width, height: (24 / 375) * width }}
+            >
+              <Image
+                source={iconSave }
+                
+              />
+            </TouchableOpacity>
+          </View>
+
+        </View>
+      </View>
+    );
+  }
+}
 
 export default App;
