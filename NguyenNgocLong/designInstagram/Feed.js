@@ -234,12 +234,11 @@ class Feed extends Component {
                 }}
                 />
               </View>
-              <Image
-                source = {popupLikeComment}
-                style={{position:"absolute", right:(74 / 375) * width, bottom:(9 / 375) * width, width: (80/375) * width , height:(43/ 375) * width}}
-              />
             </View>
-            <View style={{paddingVertical: (12/ 375) * width, backgroundColor:'#F9FAF9'}}>
+            
+          </View>   
+        </ScrollView>
+        <View style={{paddingVertical: (12/ 375) * width, backgroundColor:'#F9FAF9'}}>
               <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                 <Image
                   source = {iconHome}
@@ -254,6 +253,10 @@ class Feed extends Component {
                   style ={{width:(25 / 375)* width, height: (25 / 375)* width}}
                 />
                 <View style={{alignItems:'center'}}>
+                    <Image
+                    source = {popupLikeComment}
+                    style={{position:"absolute", bottom:(53 / 375) * width, width: (80/375) * width , height:(43/ 375) * width}}
+                  />
                   <Image
                     source = {iconBlackHeart}
                     style ={{width:(24 / 375)* width, height: (22 / 375)* width}}
@@ -274,12 +277,8 @@ class Feed extends Component {
                   source={rectangleBot}
                   style={{width: (134 / 375)*width, height: (5 / 375)* width,marginBottom:(9 / 375) *width, marginTop:(20 / 375) *width,borderRadius:(100/375)*width }}
                 />
-
               </View>
-
             </View>
-          </View>   
-        </ScrollView>
       </View>
     );
   }
