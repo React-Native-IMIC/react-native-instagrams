@@ -50,8 +50,8 @@ export default class App extends React.Component {
             <View
                 style={{
                     flexDirection: 'row',
-                    paddingRight: 12,
-                    paddingLeft: 12
+                    paddingRight: 12 * width / 375,
+                    paddingLeft: 12 * width / 375
                 }}
             >
                 <View
@@ -62,9 +62,9 @@ export default class App extends React.Component {
                         justifyContent: 'space-between'
                     }}
                 >
-                    <Image style={{ width: 24, height: 22, }} source={heartIMG} />
-                    <Image style={{ width: 24, height: 24 }} source={commentIMG} />
-                    <Image style={{ width: 24, height: 22 }} source={messageIMG} />
+                    <Image style={{ width: 24 * width / 375, height: 22 * width / 375 }} source={heartIMG} />
+                    <Image style={{ width: 24 * width / 375, height: 24 * width / 375 }} source={commentIMG} />
+                    <Image style={{ width: 24 * width / 375, height: 22 * width / 375 }} source={messageIMG} />
                 </View>
                 <View style={{ flex: 2 }}>
                     <Pagination
@@ -82,7 +82,7 @@ export default class App extends React.Component {
                     />
                 </View>
                 <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center' }}>
-                    <Image style={{ width: 21, height: 24, }} source={saveIMG} />
+                    <Image style={{ width: 21 * width / 375, height: 24 * width / 375, }} source={saveIMG} />
                 </View>
             </View>
         );
@@ -289,9 +289,9 @@ export default class App extends React.Component {
                     <View style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        paddingLeft: 15,
-                        paddingRight: 15,
-                        paddingVertical: 12,
+                        paddingLeft: 15 * width / 375,
+                        paddingRight: 15 * width / 375,
+                        paddingVertical: 12 * width / 375,
                         alignItems: 'center'
                     }}>
 
@@ -304,23 +304,23 @@ export default class App extends React.Component {
                         >
                             <Image
                                 style={{
-                                    width: 34,
-                                    height: 34,
-                                    marginRight: 9
+                                    width: 34 * width / 375,
+                                    height: 34 * width / 375,
+                                    marginRight: 9 * width / 375
                                 }}
                                 source={avatarIMG}
                             />
                             <View>
                                 <Text
                                     style={{
-                                        fontSize: 14,
+                                        fontSize: 14 * width / 375,
                                         fontWeight: 'bold',
                                         color: '#262626'
                                     }}
                                 >tammyolson</Text>
                                 <Text
                                     style={{
-                                        fontSize: 11,
+                                        fontSize: 11 * width / 375,
                                         color: '#262626'
                                     }}
                                 >Holland, Rotterdam</Text>
@@ -342,26 +342,26 @@ export default class App extends React.Component {
                             />
                             <View
                                 style={{
-                                    width: 43,
-                                    height: 24,
+                                    width: 43 * width / 375,
+                                    height: 24 * width / 375,
                                     backgroundColor: 'rgba(38, 38, 38, 0.851043)',
-                                    borderRadius: 12,
+                                    borderRadius: 12 * width / 375,
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     position: 'absolute',
-                                    right: 12,
-                                    top: 12
+                                    right: 12 * width / 375,
+                                    top: 12 * width / 375
                                 }}
                             >
                                 <Text
-                                    style={{ fontSize: 13, color: '#FFFFFF' }}
+                                    style={{ fontSize: 13 * width / 375, color: '#FFFFFF' }}
                                 >{this.state.activeSlide + 1}/{this.state.entries.length}</Text>
                             </View>
                             <Image
                                 style={{
                                     position: 'absolute',
-                                    left: 12,
-                                    bottom: 12
+                                    left: 12 * width / 375,
+                                    bottom: 12 * width / 375
                                 }}
                                 source={userIconIMG}
                             />
@@ -370,8 +370,8 @@ export default class App extends React.Component {
                     </View>
                     <View
                         style={{
-                            paddingRight: 12,
-                            paddingLeft: 12
+                            paddingRight: 12 * width / 375,
+                            paddingLeft: 12 * width / 375
 
                         }}
                     >
@@ -379,15 +379,15 @@ export default class App extends React.Component {
                             style={{
                                 flexDirection: 'row',
                                 alignItems: 'center',
-                                marginBottom: 10
+                                marginBottom: 10 * width / 375
                             }}
                         >
                             <View
                                 style={{ flexDirection: 'row', marginRight: 6 }}
                             >
-                                <Image style={{ width: 13, height: 13 }} source={myStoryIMG} />
-                                <Image style={{ width: 13, height: 13, marginLeft: -5 }} source={myStoryIMG} />
-                                <Image style={{ width: 13, height: 13, marginLeft: -5 }} source={myStoryIMG} />
+                                <Image style={{ width: 13 * width / 375, height: 13 * width / 375 }} source={myStoryIMG} />
+                                <Image style={{ width: 13 * width / 375, height: 13 * width / 375, marginLeft: -5 * width / 375 }} source={myStoryIMG} />
+                                <Image style={{ width: 13 * width / 375, height: 13 * width / 375, marginLeft: -5 * width / 375 }} source={myStoryIMG} />
                             </View>
                             <View
                                 style={{
@@ -396,7 +396,7 @@ export default class App extends React.Component {
                             >
                                 <Text
                                     style={{
-                                        fontSize: 13,
+                                        fontSize: 13 * width / 375,
                                         color: '#262626'
                                     }}
                                 >Liked by </Text>
@@ -411,56 +411,56 @@ export default class App extends React.Component {
 
                             }}
                         >
-                            <Text style={{ fontSize: 13, color: '#262626', fontWeight: 'bold' }}>tammyolson </Text>
-                            <Text style={{ fontSize: 13, color: '#3897F0' }}>#amazing #travel #instagram </Text>
+                            <Text style={{ fontSize: 13 * width / 375, color: '#262626', fontWeight: 'bold' }}>tammyolson </Text>
+                            <Text style={{ fontSize: 13 * width / 375, color: '#3897F0' }}>#amazing #travel #instagram </Text>
 
                         </View>
                         <View>
-                            <Text style={{ fontSize: 13, color: '#3897F0' }}>Look nice!</Text>
+                            <Text style={{ fontSize: 13 * width / 375, color: '#3897F0' }}>Look nice!</Text>
                         </View>
                         <View>
-                            <View style={{ marginVertical: 10 }}>
-                                <Text><Text style={{ fontSize: 13, fontWeight: 'bold' }}>tammyolson</Text> <Text>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</Text></Text>
+                            <View style={{ marginVertical: 10 * width / 375 }}>
+                                <Text><Text style={{ fontSize: 13 * width / 375, fontWeight: 'bold' }}>tammyolson</Text> <Text>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</Text></Text>
                             </View>
-                            <View style={{ marginLeft: 22, borderLeftWidth: 2, borderColor: '#EFEFEF' }}>
-                                <Text style={{ fontSize: 13, marginLeft: 10 }}>Hashtag typewriter banh mi, squid keffiyeh High Life Brooklyn twee craft beer tousled chillwave. PBR&B selfies chillwave</Text>
+                            <View style={{ marginLeft: 22 * width / 375, borderLeftWidth: 2 * width / 375, borderColor: '#EFEFEF' }}>
+                                <Text style={{ fontSize: 13 * width / 375, marginLeft: 10 * width / 375 }}>Hashtag typewriter banh mi, squid keffiyeh High Life Brooklyn twee craft beer tousled chillwave. PBR&B selfies chillwave</Text>
                             </View>
                         </View>
                     </View>
                 </ScrollView>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-around', padding: 12, borderTopWidth: 1, borderTopColor: '#DADBDA', height: 83, alignItems: 'flex-start' }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-around', padding: 12 * width / 375, borderTopWidth: 1 * width / 375, borderTopColor: '#DADBDA', height: 83 * width / 375, alignItems: 'flex-start' }}>
                     <View>
-                        <Image style={{ width: 24, height: 24 }} source={homeIMG} />
+                        <Image style={{ width: 24 * width / 375, height: 24 * width / 375 }} source={homeIMG} />
                     </View>
                     <View>
-                        <Image style={{ width: 24, height: 24 }} source={searchIMG} />
+                        <Image style={{ width: 24 * width / 375, height: 24 * width / 375 }} source={searchIMG} />
                     </View>
                     <View>
-                        <Image style={{ width: 24, height: 24 }} source={createPostIMG} />
+                        <Image style={{ width: 24 * width / 375, height: 24 * width / 375 }} source={createPostIMG} />
                     </View>
                     <View style={{ alignItems: 'center' }}>
-                        <View style={{ backgroundColor: '#ED4956', width: 80, height: 36, borderRadius: 8, flexDirection: 'row', justifyContent: 'space-around', position: 'absolute', top: -60, alignItems: 'center', tintColor: '#ED4956' }}>
+                        <View style={{ backgroundColor: '#ED4956', width: 80 * width / 375, height: 36 * width / 375, borderRadius: 8 * width / 375, flexDirection: 'row', justifyContent: 'space-around', position: 'absolute', top: -60 * width / 375, alignItems: 'center', tintColor: '#ED4956' }}>
                             <View style={{ flexDirection: 'row' }}>
                                 <Image source={cmttIMG} />
-                                <Text style={{ color: 'white', paddingLeft: 2 }}>1</Text>
+                                <Text style={{ color: 'white', paddingLeft: 2 * width / 375 }}>1</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
                                 <Image source={heartttIMG} />
-                                <Text style={{ color: 'white', paddingLeft: 2 }}>1</Text>
+                                <Text style={{ color: 'white', paddingLeft: 2 * width / 375 }}>1</Text>
                             </View>
                             <View style={{
-                                width: 15, height: 15, bottom: -4, left: 32, position: 'absolute', backgroundColor: '#ED4956', transform: [
+                                width: 15 * width / 375, height: 15 * width / 375, bottom: -4 * width / 375, left: 32 * width / 375, position: 'absolute', backgroundColor: '#ED4956', transform: [
                                     { rotate: '45deg' }
                                 ]
                             }}>
 
                             </View>
                         </View>
-                        <Image style={{ width: 26, height: 24 }} source={actionHeartIMG} />
-                        <View style={{ width: 5, height: 5, borderRadius: 50, backgroundColor: '#ED4956', marginTop: 10 }}></View>
+                        <Image style={{ width: 26 * width / 375, height: 24 * width / 375 }} source={actionHeartIMG} />
+                        <View style={{ width: 5 * width / 375, height: 5 * width / 375, borderRadius: 50 * width / 375, backgroundColor: '#ED4956', marginTop: 10 * width / 375 }}></View>
                     </View>
                     <View>
-                        <Image style={{ width: 24, height: 24 }} source={myStoryIMG} />
+                        <Image style={{ width: 24 * width / 375, height: 24 * width / 375 }} source={myStoryIMG} />
                     </View>
                 </View>
             </View>
