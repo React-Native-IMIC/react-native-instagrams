@@ -156,7 +156,8 @@ export default class App extends React.Component {
                         <View
                             style={{
                                 marginLeft: 15 * width / 375,
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
                             }}
                         >
                             <Image
@@ -169,14 +170,16 @@ export default class App extends React.Component {
                             <Text
                                 style={{
                                     fontSize: 10 * width / 375,
-                                    color: '#999999'
+                                    color: '#999999',
+
                                 }}
                             >Your Story</Text>
                         </View>
                         <View
                             style={{
                                 marginLeft: 15 * width / 375,
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
                             }}
                         >
                             <Image
@@ -189,7 +192,8 @@ export default class App extends React.Component {
                             <Text
                                 style={{
                                     fontSize: 10 * width / 375,
-                                    color: '#262626'
+                                    color: '#262626',
+
                                 }}
                             >
                                 Other Story
@@ -198,7 +202,8 @@ export default class App extends React.Component {
                         <View
                             style={{
                                 marginLeft: 15 * width / 375,
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
                             }}
                         >
                             <Image
@@ -211,7 +216,8 @@ export default class App extends React.Component {
                             <Text
                                 style={{
                                     fontSize: 10 * width / 375,
-                                    color: '#262626'
+                                    color: '#262626',
+
                                 }}
                             >
                                 Other Story
@@ -220,7 +226,8 @@ export default class App extends React.Component {
                         <View
                             style={{
                                 marginLeft: 15 * width / 375,
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
                             }}
                         >
                             <Image
@@ -233,7 +240,8 @@ export default class App extends React.Component {
                             <Text
                                 style={{
                                     fontSize: 10 * width / 375,
-                                    color: '#262626'
+                                    color: '#262626',
+
                                 }}
                             >
                                 Other Story
@@ -242,7 +250,8 @@ export default class App extends React.Component {
                         <View
                             style={{
                                 marginLeft: 15 * width / 375,
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
                             }}
                         >
                             <Image
@@ -255,7 +264,8 @@ export default class App extends React.Component {
                             <Text
                                 style={{
                                     fontSize: 10 * width / 375,
-                                    color: '#262626'
+                                    color: '#262626',
+
                                 }}
                             >
                                 Other Story
@@ -264,7 +274,8 @@ export default class App extends React.Component {
                         <View
                             style={{
                                 marginLeft: 15 * width / 375,
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
                             }}
                         >
                             <Image
@@ -277,7 +288,8 @@ export default class App extends React.Component {
                             <Text
                                 style={{
                                     fontSize: 10 * width / 375,
-                                    color: '#262626'
+                                    color: '#262626',
+
                                 }}
                             >
                                 Other Story
@@ -315,13 +327,15 @@ export default class App extends React.Component {
                                     style={{
                                         fontSize: 14 * width / 375,
                                         fontWeight: 'bold',
-                                        color: '#262626'
+                                        color: '#262626',
+
                                     }}
                                 >tammyolson</Text>
                                 <Text
                                     style={{
                                         fontSize: 11 * width / 375,
-                                        color: '#262626'
+                                        color: '#262626',
+
                                     }}
                                 >Holland, Rotterdam</Text>
                             </View>
@@ -397,12 +411,13 @@ export default class App extends React.Component {
                                 <Text
                                     style={{
                                         fontSize: 13 * width / 375,
-                                        color: '#262626'
+                                        color: '#262626',
+
                                     }}
                                 >Liked by </Text>
-                                <Text style={{ color: '#262626', fontWeight: 'bold', fontSize: 13 }}>KnE </Text>
-                                <Text>and </Text>
-                                <Text style={{ color: '#262626', fontWeight: 'bold', fontSize: 13 }}>115 321 others</Text>
+                                <Text style={{ color: '#262626', fontSize: 13, fontWeight: '600' }}>KnE </Text>
+                                <Text style={{ color: '#262626', fontSize: 13, }}>and </Text>
+                                <Text style={{ color: '#262626', fontWeight: 'bold', fontSize: 13, }}>115 321 others</Text>
                             </View>
                         </View>
                         <View
@@ -463,7 +478,7 @@ export default class App extends React.Component {
                         <Image style={{ width: 24 * width / 375, height: 24 * width / 375 }} source={myStoryIMG} />
                     </View>
                 </View>
-            </View>
+            </View >
         );
     }
 }
