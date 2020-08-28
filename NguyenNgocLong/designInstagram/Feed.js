@@ -4,7 +4,7 @@ import { View, Text, Image, Dimensions, ScrollView,TouchableOpacity, Slider, Lin
 import { avatar,iconCamera,iconDirectMessage,iconWatch,yourStory
   ,story1,story2,story3,story4,iconMore,imageUpload,iconSave,addButton,iconUser,iconSlide
   ,iconNumberOfPictures,iconHeart,iconComment,iconBlackHeart, iconCreatePost, iconHome,iconSearch,
-  imageUser, likeComment, likedUsers,popupLikeComment} from './assets/images';
+  imageUser, likeComment, likedUsers,popupLikeComment,rectangle,rectangleBot,belowHeart } from './assets/images';
 const { width } = Dimensions.get('window');
 class Feed extends Component {
   constructor(props) {
@@ -220,6 +220,63 @@ class Feed extends Component {
                 }}
                 />
               </View>
+              <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
+                <View style={{flexDirection:'row',width:(327/375)*width}}>
+                  <Image
+                    source = {rectangle}
+                    style={{marginHorizontal:(10 / 375) * width}}
+                  />
+                  <Text style={{fontSize:(13/ 375) * width, fontFamily:'SF-Pro-Display-Regular',color:'#262626',flex:1,flexWrap:'wrap'}}>Hashtag typewriter banh mi, squid keffiyeh High Life Brooklyn twee craft beer tousled chillwave. PBR&B selfies chillwave</Text>
+                </View>
+                <Image
+                  source ={likeComment}
+                  style={{width:(11/375)*width,height: (9/375)*width
+                }}
+                />
+              </View>
+              <Image
+                source = {popupLikeComment}
+                style={{position:"absolute", right:(74 / 375) * width, bottom:(9 / 375) * width, width: (80/375) * width , height:(43/ 375) * width}}
+              />
+            </View>
+            <View style={{paddingVertical: (12/ 375) * width, backgroundColor:'#F9FAF9'}}>
+              <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                <Image
+                  source = {iconHome}
+                  style ={{width:(23 / 375)* width, height: (24 / 375)* width,marginLeft:(18/375)*width}}
+                />
+                 <Image
+                  source = {iconSearch}
+                  style ={{width:(22 / 375)* width, height: (22 / 375)* width}}
+                />
+                <Image
+                  source = {iconCreatePost}
+                  style ={{width:(25 / 375)* width, height: (25 / 375)* width}}
+                />
+                <View style={{alignItems:'center'}}>
+                  <Image
+                    source = {iconBlackHeart}
+                    style ={{width:(24 / 375)* width, height: (22 / 375)* width}}
+                  />
+                  <Image
+                    source = {belowHeart}
+                    style ={{width:(5 / 375)* width, height: (5 / 375)* width, marginTop: (9/ 375)* width}}
+                  />
+                </View>
+                <Image
+                  source = {imageUser}
+                  style ={{width:(24 / 375)* width, height: (23 / 375)* width, marginRight:(21/375)*width}}
+                />
+
+              </View>
+              <View style={{alignItems:'center'}} >
+                <Image
+                  source={rectangleBot}
+                  style={{width: (134 / 375)*width, height: (5 / 375)* width,marginBottom:(9 / 375) *width, marginTop:(20 / 375) *width,borderRadius:(100/375)*width }}
+                />
+
+              </View>
+
             </View>
           </View>   
         </ScrollView>

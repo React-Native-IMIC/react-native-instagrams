@@ -24,10 +24,14 @@ const imageUser = require('./imageUser.png')
 const likeComment = require('./likeComment.png')
 const likedUsers = require('./likedUsers.png')
 const popupLikeComment = require('./popupLikeComment.png')
+const rectangle = require('./rectangle.png')
+const rectangleBot = require('./rectangleBot.png')
+const belowHeart = require('./belowHeart.png')
+
 export{
     avatar,iconCamera,iconDirectMessage,iconWatch,yourStory,
     story1,story2,story3,story4,iconMore,imageUpload,iconSave,
     iconNumberOfPictures,iconHeart,iconComment,addButton,iconSlide,
     iconUser, iconBlackHeart, iconCreatePost, iconHome,iconSearch,
-    imageUser, likeComment, likedUsers,popupLikeComment
+    imageUser, likeComment, likedUsers,popupLikeComment,rectangle,rectangleBot,belowHeart
 }
