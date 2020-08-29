@@ -15,5 +15,9 @@ const createPostIMG = require('./create-post.png');
 const actionHeartIMG = require('./hear.png');
 const cmttIMG = require('./comment-ttt.png');
 const heartttIMG = require('./heart-tt.png');
+const chevLIMG = require('./chev-l.png');
+const galleryIonIMG = require('./gallery-icon.png');
+const galleryProfileIMG = require('./gallery-profile.png');
+const galleryIMG = require('./gallery-image.png');
 
-export { photoIMG, igtvIMG, messageIMG, myStoryIMG, avatarIMG, moreIcon, postIMG, userIconIMG, heartIMG, commentIMG, saveIMG, homeIMG, searchIMG, createPostIMG, actionHeartIMG, cmttIMG, heartttIMG };
+export { galleryIMG, galleryIonIMG, galleryProfileIMG, photoIMG, igtvIMG, messageIMG, myStoryIMG, avatarIMG, moreIcon, postIMG, userIconIMG, heartIMG, commentIMG, saveIMG, homeIMG, searchIMG, createPostIMG, actionHeartIMG, cmttIMG, heartttIMG, chevLIMG };
