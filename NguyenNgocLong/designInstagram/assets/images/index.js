@@ -27,11 +27,32 @@ const popupLikeComment = require('./popupLikeComment.png')
 const rectangle = require('./rectangle.png')
 const rectangleBot = require('./rectangleBot.png')
 const belowHeart = require('./belowHeart.png')
+const backIcon = require('./backIcon.png')
+
+const iconList = require('./iconList.png')
+const iconAccount = require('./iconAccount.png')
+
+const post1 = require('./post1.png')
+const post2 = require('./post2.png')
+const post3 = require('./post3.png')
+const post4 = require('./post4.png')
+const post5 = require('./post5.png')
+const post6 = require('./post6.png')
+const post7 = require('./post7.png')
+const post8 = require('./post8.png')
+const post9 = require('./post9.png')
+const post10 = require('./post10.png')
+const post11 = require('./post11.png')
+const post12 = require('./post12.png')
+const post13 = require('./post13.png')
+const post14 = require('./post14.png')
+const post15 = require('./post15.png')
 
 export{
     avatar,iconCamera,iconDirectMessage,iconWatch,yourStory,
     story1,story2,story3,story4,iconMore,imageUpload,iconSave,
     iconNumberOfPictures,iconHeart,iconComment,addButton,iconSlide,
     iconUser, iconBlackHeart, iconCreatePost, iconHome,iconSearch,
-    imageUser, likeComment, likedUsers,popupLikeComment,rectangle,rectangleBot,belowHeart
+    imageUser, likeComment, likedUsers,popupLikeComment,rectangle,rectangleBot,belowHeart,backIcon,
+    post1,post2,post3,post4,post5,post6,post7,post8,post9,post10,post11,post12,post13,post14,post15,iconList,iconAccount
 }

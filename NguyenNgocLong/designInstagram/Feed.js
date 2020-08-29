@@ -1,6 +1,6 @@
  
 import React, { Component } from 'react';
-import { View, Text, Image, Dimensions, ScrollView,TouchableOpacity, Slider, Linking } from 'react-native';
+import { View, Text, Image, Dimensions, ScrollView,TouchableOpacity } from 'react-native';
 import { avatar,iconCamera,iconDirectMessage,iconWatch,yourStory
   ,story1,story2,story3,story4,iconMore,imageUpload,iconSave,addButton,iconUser,iconSlide
   ,iconNumberOfPictures,iconHeart,iconComment,iconBlackHeart, iconCreatePost, iconHome,iconSearch,
@@ -13,7 +13,7 @@ class Feed extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View
             style={{
               flexDirection: 'row',
