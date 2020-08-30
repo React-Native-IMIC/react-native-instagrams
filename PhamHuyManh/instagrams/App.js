@@ -14,7 +14,10 @@ import {
   swiperImage,
   user,
   hear,
+  image1,
 } from './assets/images';
+import Swiper from 'react-native-swiper';
+
 const { width } = Dimensions.get('window');
 
 const userDatas = [
@@ -40,6 +43,45 @@ const userDatas = [
   },
 ];
 
+const galleryDatas = [
+  {
+    image: image1,
+    userName: 'helge_nilsen',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen1',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen2',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen3',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen4',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen3',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen4',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen3',
+  },
+  {
+    image: image1,
+    userName: 'helge_nilsen4',
+  },
+];
+
 const Fonts = {
   helvetica: {
     fontFamily: 'Helvetica',
@@ -60,6 +102,56 @@ class App extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  renderSwiperPagination = (index, total, context) => {
+    let paginationView = [];
+    for (let swiperIndex = 0; swiperIndex < total; swiperIndex++) {
+      paginationView.push(
+        <View
+          style={{
+            width: 6,
+            height: 6,
+            borderRadius: 3,
+            marginRight: 5,
+            backgroundColor: swiperIndex === index ? '#3897F0' : '#efefef',
+          }}
+        />,
+      );
+    }
+    return (
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          paddingTop: 8,
+          paddingBottom: 11,
+          paddingHorizontal: 12,
+        }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Image
+            source={hear}
+            style={{ marginRight: 18, width: 24, height: 24 }}
+            resizeMode="contain"
+          />
+          <Image
+            source={hear}
+            style={{ marginRight: 18, width: 24, height: 24 }}
+            resizeMode="contain"
+          />
+          <Image
+            source={hear}
+            style={{ marginRight: 32, width: 24, height: 24 }}
+            resizeMode="contain"
+          />
+
+          <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+            {paginationView}
+          </View>
+        </View>
+        <Image source={hear} />
+      </View>
+    );
+  };
 
   render() {
     return (
@@ -167,72 +259,161 @@ class App extends React.Component {
           />
         </View>
 
-        <View>
-          <Image
-            source={swiperImage}
-            style={{
-              width,
-              height: 278,
-            }}
-            resizeMode="cover"
-          />
-          <Image
-            source={user}
-            style={{ position: 'absolute', left: 12, bottom: 12 }}
-          />
+        <Swiper
+          showsPagination
+          loop={false}
+          renderPagination={this.renderSwiperPagination}>
+          <View>
+            <Image
+              source={swiperImage}
+              style={{
+                width,
+                height: 278,
+              }}
+              resizeMode="cover"
+            />
+            <Image
+              source={user}
+              style={{ position: 'absolute', left: 12, bottom: 12 }}
+            />
 
-          <View
-            style={{
-              position: 'absolute',
-              top: 12,
-              right: 12,
-              width: 43,
-              height: 24,
-              backgroundColor: 'rgba(38, 38, 38, 0.85)',
-              borderRadius: 12,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <Text style={{ color: '#fff', ...Fonts.sfProRegular, fontSize: 12 }}>
-              1/9
-            </Text>
+            <View
+              style={{
+                position: 'absolute',
+                top: 12,
+                right: 12,
+                width: 43,
+                height: 24,
+                backgroundColor: 'rgba(38, 38, 38, 0.85)',
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{ color: '#fff', ...Fonts.sfProRegular, fontSize: 12 }}>
+                1/9
+              </Text>
+            </View>
           </View>
-        </View>
+          <View>
+            <Image
+              source={swiperImage}
+              style={{
+                width,
+                height: 278,
+              }}
+              resizeMode="cover"
+            />
+            <Image
+              source={user}
+              style={{ position: 'absolute', left: 12, bottom: 12 }}
+            />
 
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            paddingTop: 8,
-            paddingBottom: 11,
-            paddingHorizontal: 12,
-          }}>
-          <View style={{ flexDirection: 'row' }}>
-            <Image
-              source={hear}
-              style={{ marginRight: 18, width: 24, height: 24 }}
-              resizeMode="contain"
-            />
-            <Image
-              source={hear}
-              style={{ marginRight: 18, width: 24, height: 24 }}
-              resizeMode="contain"
-            />
-            <Image
-              source={hear}
-              style={{ marginRight: 18, width: 24, height: 24 }}
-              resizeMode="contain"
-            />
-            <Image source={hear} />
+            <View
+              style={{
+                position: 'absolute',
+                top: 12,
+                right: 12,
+                width: 43,
+                height: 24,
+                backgroundColor: 'rgba(38, 38, 38, 0.85)',
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{ color: '#fff', ...Fonts.sfProRegular, fontSize: 12 }}>
+                2/9
+              </Text>
+            </View>
           </View>
-          <Image source={hear} />
-        </View>
+          <View>
+            <Image
+              source={swiperImage}
+              style={{
+                width,
+                height: 278,
+              }}
+              resizeMode="cover"
+            />
+            <Image
+              source={user}
+              style={{ position: 'absolute', left: 12, bottom: 12 }}
+            />
+
+            <View
+              style={{
+                position: 'absolute',
+                top: 12,
+                right: 12,
+                width: 43,
+                height: 24,
+                backgroundColor: 'rgba(38, 38, 38, 0.85)',
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{ color: '#fff', ...Fonts.sfProRegular, fontSize: 12 }}>
+                2/9
+              </Text>
+            </View>
+          </View>
+          <View>
+            <Image
+              source={swiperImage}
+              style={{
+                width,
+                height: 278,
+              }}
+              resizeMode="cover"
+            />
+            <Image
+              source={user}
+              style={{ position: 'absolute', left: 12, bottom: 12 }}
+            />
+
+            <View
+              style={{
+                position: 'absolute',
+                top: 12,
+                right: 12,
+                width: 43,
+                height: 24,
+                backgroundColor: 'rgba(38, 38, 38, 0.85)',
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{ color: '#fff', ...Fonts.sfProRegular, fontSize: 12 }}>
+                2/9
+              </Text>
+            </View>
+          </View>
+        </Swiper>
+
         <View style={{ flex: 1 }}>
-          <Text style={{ ...Fonts.sfProRegular, fontSize: 13 }}>
-            <Text style={{ ...Fonts.sfProBold, fontSize: 13 }}>tammyolson</Text>{' '}
-            Banjo tote bag bicycle rights, High Life {'\n'}sartorial cray craft
-            beer whatever street art fap.
-          </Text>
+          <FlatList
+            data={galleryDatas}
+            keyExtractor={(item, index) => `gallery-${index}`}
+            numColumns={3}
+            renderItem={({ item, index }) => {
+              return (
+                <Image
+                  source={item.image}
+                  style={{
+                    width: (124 / 375) * width,
+                    height: (124 / 375) * width,
+                  }}
+                />
+              );
+            }}
+            columnWrapperStyle={{
+              justifyContent: 'space-between',
+              marginBottom: (2 / 375) * width,
+            }}
+          />
         </View>
       </View>
     );
